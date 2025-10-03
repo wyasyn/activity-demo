@@ -1,4 +1,5 @@
 import { useState } from "react";
+import VideoPlayer from "./video-palyer";
 
 export default function NoActivityVideo() {
   const [showVideo, setShowVideo] = useState(false);
@@ -15,15 +16,7 @@ export default function NoActivityVideo() {
         {showVideo ? "Hide" : "Show"} Video
       </button>
 
-      {showVideo && (
-        <video
-          className="rounded-2xl"
-          src="/video.mp4"
-          controls
-          autoPlay
-          loop
-        />
-      )}
+      {showVideo && <VideoPlayer />}
     </div>
   );
 }
