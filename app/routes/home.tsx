@@ -1,5 +1,8 @@
+import NoActivityVideo from "~/components/video-plyayer/no-activity";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import ActivityVideo from "~/components/video-plyayer/activity-video";
+import MultiStepFormNoActivity from "~/multi-step-form/form-with-no-activity";
+import MultiStepFormActivity from "~/multi-step-form/form-with-activity";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +12,12 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="space-y-12 p-6">
+      {/* <NoActivityVideo />
+      <ActivityVideo /> */}
+      <MultiStepFormNoActivity />
+      <MultiStepFormActivity />
+    </div>
+  );
 }
