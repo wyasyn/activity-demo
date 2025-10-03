@@ -14,8 +14,8 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="space-y-12 p-6">
-      {/* <NoActivityVideo />
-      <ActivityVideo /> */}
+      <NoActivityVideo />
+      <ActivityVideo />
       <MultiStepFormNoActivity />
       <MultiStepFormActivity />
     </div>
